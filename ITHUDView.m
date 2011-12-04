@@ -80,12 +80,14 @@
 #pragma mark ITHUDView Methods
 - (BOOL)shouldShowOverlay
 {
-    return (!delegate || [delegate HUDViewShouldShowOverlay: self]);
+    return (!delegate                                                           ||
+            ![delegate respondsToSelector:@selector(HUDViewShouldShowOverlay:)] ||
+            [delegate HUDViewShouldShowOverlay: self]);
 }
 
 - (void)display
 {
-    if (delegate)
+    if (delegate && [delegate respondsToSelector:@selector(HUDViewWillDisplay:)])
     {
         [delegate HUDViewWillDisplay: self];
     }
@@ -142,7 +144,7 @@
                    } 
                }];
               
-              if (delegate)
+              if (delegate && [delegate respondsToSelector:@selector(HUDView:didDisplay:)])
               {
                   [delegate HUDView: self
                          didDisplay: completed];
@@ -153,7 +155,7 @@
 
 - (void)dismiss
 {
-    if (delegate)
+    if (delegate && [delegate respondsToSelector:@selector(HUDViewWillDismiss:)])
     {
         [delegate HUDViewWillDismiss: self];
     }
@@ -195,7 +197,7 @@
          [self setHidden: YES];
          [self setFrame: startFrame];
          
-         if (delegate)
+         if (delegate && [delegate respondsToSelector:@selector(HUDView:didDismiss:)])
          {
              [delegate HUDView: self
                     didDismiss: completed];
