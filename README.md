@@ -15,6 +15,7 @@ A HUD is created as a transparent panel (sometimes called a "heads-up display").
 
 Optionally, the HUD may also display a translucent overlay, immediate below itself (in the view hierarchy). This overlay, when tapped, will dismiss the HUD.
 
+<img src="http://i.imgur.com/WzHyS.gif"/>
 
 ##Tasks##
 
