@@ -28,6 +28,7 @@ Optionally, the HUD may also display a translucent overlay, immediate below itse
 ##Properties##
 
 **isDisplaying**
+
 >Whether the HUD is displaying.
 
         (readonly) BOOL isDisplaying
