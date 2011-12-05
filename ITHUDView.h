@@ -33,6 +33,7 @@
 }
 
 #pragma mark ITHUDView Properties
+@property (readonly)          BOOL                  isDisplaying;
 @property (nonatomic, retain) id<ITHUDViewDelegate> delegate;
 
 #pragma mark ITHUDView Methods
