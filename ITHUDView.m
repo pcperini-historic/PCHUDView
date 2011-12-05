@@ -33,6 +33,7 @@
 #pragma mark - ITHUDView Implmentation
 @implementation ITHUDView
 
+@synthesize isDisplaying;
 @synthesize delegate;
 
 #pragma mark UIView Methods
@@ -149,6 +150,8 @@
                   [delegate HUDView: self
                          didDisplay: completed];
               }
+              
+              isDisplaying = YES;
           }];
      }];
 }
@@ -202,6 +205,8 @@
              [delegate HUDView: self
                     didDismiss: completed];
          }
+         
+         isDisplaying = NO
      }];
 }
 
