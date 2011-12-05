@@ -27,13 +27,16 @@ Optionally, the HUD may also display a translucent overlay, immediate below itse
 
 ##Properties##
 
+**isDisplaying**
+>Whether the HUD is displaying.
+
+        (readonly) BOOL isDisplaying
+
 **delegate**
 
 >The HUD's delegate.
 
-        (retain) id<ITHUDViewDelegate> delegate
-
-**text**
+        (nonatomic, retain) id<ITHUDViewDelegate> delegate
 
 ##Instance Methods##
 
