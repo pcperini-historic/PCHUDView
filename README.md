@@ -19,7 +19,8 @@ Optionally, the HUD may also display a translucent overlay, immediate below itse
 ##Tasks##
 
 ###Configuring HUDs###
-    delegate    (property)
+    isDisplaying (property)
+    delegate     (property)
 
 ###Displaying and Dismissing HUDs###
     - display
@@ -27,17 +28,17 @@ Optionally, the HUD may also display a translucent overlay, immediate below itse
 
 ##Properties##
 
-**isDisplaying**
-
->Whether the HUD is displaying.
-
-        (readonly) BOOL isDisplaying
-
 **delegate**
 
 >The HUD's delegate.
 
         (nonatomic, retain) id<ITHUDViewDelegate> delegate
+        
+**isDisplaying**
+
+>Whether the HUD is displaying.
+
+        (readonly) BOOL isDisplaying
 
 ##Instance Methods##
 
