@@ -1,12 +1,12 @@
 //
-//  ITHUDView.m
-//  ITHUDView
+//  PCHUDView.m
+//  PCHUDView
 //
 //  Created by Patrick Perini on 12/2/11.
 //  Licensing information availabe in README.md
 //
 
-#import "ITHUDView.h"
+#import "PCHUDView.h"
 
 #pragma mark Macros and Interfaces
 @interface DismissView : UIView @end
@@ -30,8 +30,8 @@
 #define AccentAnimationDuration .18
 #define FadeAnimationDelay      .06
 
-#pragma mark - ITHUDView Implmentation
-@implementation ITHUDView
+#pragma mark - PCHUDView Implmentation
+@implementation PCHUDView
 
 @synthesize isDisplaying;
 @synthesize delegate;
@@ -78,7 +78,7 @@
     [super addSubview: view];
 }
 
-#pragma mark ITHUDView Methods
+#pragma mark PCHUDView Methods
 - (BOOL)shouldShowOverlay
 {
     return (!delegate                                                           ||
